@@ -28,34 +28,16 @@ dependencies = [
     # Add your project dependencies here
 ]
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
-    "nbdev>=2.3.12",
-    "jupyter",
-    "ipython",
-]
-test = [
-    "pytest>=7.0",
-    "pytest-cov",
-]
-docs = [
-    "quarto",
-]
-
-[tool.uv]
-dev-dependencies = [
-    "nbdev>=2.3.12",
-    "jupyter",
-    "ipython",
-    "pytest>=7.0",
+    "ipykernel,
+    "nbdev",
+    "pytest",
     "pytest-cov",
     "pre-commit",
     "black",
     "ruff",
 ]
-
-[tool.uv.sources]
-# Add any custom package sources if needed
 
 [tool.nbdev]
 # nbdev configuration
