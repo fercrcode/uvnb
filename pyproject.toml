@@ -30,7 +30,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "ipykernel,
+    "ipykernel",
     "nbdev",
     "pytest",
     "pytest-cov",
