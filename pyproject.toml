@@ -1,0 +1,98 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "project-name"
+version = "0.0.1"
+description = "A brief description of your project"
+readme = "README.md"
+license = {text = "Apache 2.0"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Author Name", email = "author@example.com"}
+]
+keywords = ["keyword1", "keyword2"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    # Add your project dependencies here
+]
+
+[project.optional-dependencies]
+dev = [
+    "nbdev>=2.3.12",
+    "jupyter",
+    "ipython",
+]
+test = [
+    "pytest>=7.0",
+    "pytest-cov",
+]
+docs = [
+    "quarto",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "nbdev>=2.3.12",
+    "jupyter",
+    "ipython",
+    "pytest>=7.0",
+    "pytest-cov",
+    "pre-commit",
+    "black",
+    "ruff",
+]
+
+[tool.uv.sources]
+# Add any custom package sources if needed
+
+[tool.nbdev]
+# nbdev configuration
+lib_path = "project_name"
+nbs_path = "nbs"
+doc_path = "docs"
+recursive = true
+tst_flags = "notest"
+clean_flag_re = "all_flag"
+put_script = []
+cfg_name = "nbdev.yml"
+black_formatting = true
+doc_host = "https://example.com"
+doc_baseurl = "/"
+git_url = "https://github.com/example/repo"
+git_branch = "main"
+allowed_metadata_keys = ""
+allowed_cli_metadata_keys = ""
+
+[tool.black]
+line-length = 100
+target-version = ['py310', 'py311', 'py312']
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E501"]  # Line too long (handled by black)
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=project_name --cov-report=html --cov-report=term"
+
+[tool.coverage.run]
+branch = true
+omit = [
+    "*/tests/*",
+]
