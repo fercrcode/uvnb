@@ -1,4 +1,4 @@
-# Project Name
+# UVNB: Template for using nbdev in a uv-managed project
 
 ## About This Template
 
