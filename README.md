@@ -40,6 +40,8 @@ authors = [{name = "Your Name", email = "your.email@example.com"}]
 dependencies = ["numpy", "pandas"]
 ```
 
+ATTENTION: Do not forget to rename the project_name folder to the name specified above!
+
 ### 3. Install `uv`
 
 If you don't have `uv` installed, run:
