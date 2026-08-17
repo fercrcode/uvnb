@@ -79,7 +79,7 @@ This creates the nbdev folder structure (`nbs/`, `docs/`, etc.) and initializes 
 ### 7. Install Pre-commit Hooks
 
 ```bash
-pre-commit install
+uv run pre-commit install
 ```
 
 This sets up automatic code quality checks before each commit.
