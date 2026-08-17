@@ -71,7 +71,7 @@ uv run nbdev-install-quarto
 ### 6. Initialize nbdev
 
 ```bash
-uv run nbdev-new .
+uv run nbdev-new
 ```
 
 This creates the nbdev folder structure (`nbs/`, `docs/`, etc.) and initializes the nbdev configuration file. You may want to set an acess token to use with private repositories or bypass API rate limits.
