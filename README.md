@@ -65,13 +65,13 @@ This installs all dependencies, development tools, and optional groups.
 For HTML/PDF documentation generation:
 
 ```bash
-nbdev-install-quarto
+uv run nbdev-install-quarto
 ```
 
 ### 6. Initialize nbdev
 
 ```bash
-nbdev-new .
+uv run nbdev-new .
 ```
 
 This creates the nbdev folder structure (`nbs/`, `docs/`, etc.) and initializes the nbdev configuration file.
