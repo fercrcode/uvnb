@@ -40,7 +40,7 @@ authors = [{name = "Your Name", email = "your.email@example.com"}]
 dependencies = ["numpy", "pandas"]
 ```
 
-ATTENTION: Do not forget to rename the project_name folder to the name specified above!
+ATTENTION: Do not forget to rename the project_name folder to the name specified above, as well as any other instances of project_name elswhere!
 
 ### 3. Install `uv`
 
@@ -74,7 +74,7 @@ uv run nbdev-install-quarto
 uv run nbdev-new .
 ```
 
-This creates the nbdev folder structure (`nbs/`, `docs/`, etc.) and initializes the nbdev configuration file.
+This creates the nbdev folder structure (`nbs/`, `docs/`, etc.) and initializes the nbdev configuration file. You may want to set an acess token to use with private repositories or bypass API rate limits.
 
 ### 7. Install Pre-commit Hooks
 
